@@ -1,14 +1,12 @@
 import { motion } from "framer-motion";
 import { office } from "@/lib/content";
 import { MapPin, Monitor, CheckCircle } from "lucide-react";
-import office1 from "@/assets/office-1.jpg";
-import office2 from "@/assets/office-2.jpg";
-import office3 from "@/assets/office-3.jpg";
+import office1 from "@/assets/office-real-1.png";
+import office2 from "@/assets/office-real-2.png";
 
 const officeImages = [
-  { src: office1, alt: "Therapy office waiting area with comfortable seating" },
-  { src: office2, alt: "Private consultation room with natural light" },
-  { src: office3, alt: "Cozy therapy space with plants and soft textures" },
+  { src: office1, alt: "Dr. Maya Reynolds therapy office in Santa Monica" },
+  { src: office2, alt: "Calm, comfortable therapy space with natural light" },
 ];
 
 export function Office() {
@@ -37,8 +35,8 @@ export function Office() {
           </motion.p>
         </div>
 
-        {/* Image Grid */}
-        <div className="grid md:grid-cols-3 gap-4 md:gap-6 mb-12 md:mb-16">
+        {/* Image Grid - 2 images side by side */}
+        <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-12 md:mb-16">
           {officeImages.map((image, index) => (
             <motion.div
               key={index}
@@ -46,7 +44,7 @@ export function Office() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="aspect-square overflow-hidden rounded-lg"
+              className="aspect-[4/3] overflow-hidden rounded-lg"
             >
               <img
                 src={image.src}
