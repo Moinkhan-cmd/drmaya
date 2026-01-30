@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { about } from "@/lib/content";
-import therapistPortrait from "@/assets/therapist-portrait.jpg";
+import therapistPortrait from "@/assets/dr-maya-reynolds.png";
 
 export function About() {
   return (
