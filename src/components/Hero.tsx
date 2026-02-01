@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { hero } from "@/lib/content";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-office.jpg";
+import heroImage from "@/assets/office-real-1.png";
 
 export function Hero() {
   return (
