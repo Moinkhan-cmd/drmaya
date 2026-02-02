@@ -155,6 +155,6 @@ export const footer = {
     weekend: "Saturday: By appointment",
   },
   credentials: "Dr. Maya Reynolds, PsyD | Licensed Clinical Psychologist",
-  copyright: "© 2024 Dr. Maya Reynolds. All rights reserved.",
+  copyright: "© 2026 Dr. Maya Reynolds. All rights reserved.",
   disclaimer: "This website does not constitute medical advice. Please consult with a licensed professional for personalized care.",
 };
