@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { navigation, siteConfig } from "@/lib/content";
+import { navigation } from "@/lib/content";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import logo from "@/assets/logo.png";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,8 +14,8 @@ export function Header() {
       <div className="container-wide">
         <div className="flex items-center justify-between h-16 md:h-20 px-6 lg:px-8">
           {/* Logo */}
-          <a href="/" className="font-display text-xl md:text-2xl font-medium text-foreground">
-            {siteConfig.name}
+          <a href="/" className="flex items-center">
+            <img src={logo} alt="Dr. Maya Reynolds, PsyD" className="h-10 md:h-12 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
@@ -30,6 +32,7 @@ export function Header() {
             <Button asChild size="sm" className="ml-4">
               <a href={navigation.cta.href}>{navigation.cta.label}</a>
             </Button>
+            <ThemeToggle />
           </nav>
 
           {/* Mobile Menu Button */}
