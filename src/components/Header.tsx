@@ -13,8 +13,13 @@ export function Header() {
       <div className="container-wide">
         <div className="flex items-center justify-between h-16 md:h-20 px-6 lg:px-8">
           {/* Logo */}
-          <a href="/" className="font-display text-xl md:text-2xl font-medium text-foreground">
-            {siteConfig.name}
+          <a href="/" className="flex flex-col">
+            <span className="font-display text-xl md:text-2xl font-semibold text-foreground tracking-tight">
+              Dr. Maya Reynolds
+            </span>
+            <span className="font-body text-[10px] md:text-xs uppercase tracking-[0.2em] text-muted-foreground">
+              Licensed Clinical Psychologist
+            </span>
           </a>
 
           {/* Desktop Navigation */}
