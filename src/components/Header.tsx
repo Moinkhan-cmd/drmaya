@@ -52,10 +52,11 @@ export function Header() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden border-t border-border bg-background"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="md:hidden absolute top-full left-0 right-0 border-t border-border bg-background shadow-lg z-50"
           >
             <nav className="flex flex-col p-6 gap-4">
               {navigation.links.map((link) => (
@@ -68,11 +69,14 @@ export function Header() {
                   {link.label}
                 </a>
               ))}
-              <Button asChild className="mt-4">
-                <a href={navigation.cta.href} onClick={() => setIsOpen(false)}>
-                  {navigation.cta.label}
-                </a>
-              </Button>
+              <div className="flex items-center justify-between mt-4 gap-4">
+                <Button asChild className="flex-1">
+                  <a href={navigation.cta.href} onClick={() => setIsOpen(false)}>
+                    {navigation.cta.label}
+                  </a>
+                </Button>
+                <ThemeToggle />
+              </div>
             </nav>
           </motion.div>
         )}
